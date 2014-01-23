@@ -1,9 +1,9 @@
 # coding: utf-8
 require 'spec_helper'
 
-describe JpPrefecture::Prefecture do
+describe VnPrefecture::Prefecture do
   describe '.build' do
-    let(:pref) { JpPrefecture::Prefecture.build(1, '北海道', 'Hokkaido') }
+    let(:pref) { VnPrefecture::Prefecture.build(1, '北海道', 'Hokkaido') }
     it { pref.code.should eq 1 }
     it { pref.name.should eq '北海道' }
     it { pref.name_e.should eq 'Hokkaido' }
@@ -13,7 +13,7 @@ describe JpPrefecture::Prefecture do
   describe '.find' do
     describe '検索結果について' do
       shared_examples "都道府県が見つかる" do |arg|
-        let(:pref) { JpPrefecture::Prefecture.find(arg) }
+        let(:pref) { VnPrefecture::Prefecture.find(arg) }
         it { pref.code.should eq 1 }
         it { pref.name.should eq '北海道' }
         it { pref.name_e.should eq 'Hokkaido' }
@@ -21,7 +21,7 @@ describe JpPrefecture::Prefecture do
       end
 
       shared_examples '都道府県が見つからない' do |arg|
-        let(:pref) { JpPrefecture::Prefecture.find(arg) }
+        let(:pref) { VnPrefecture::Prefecture.find(arg) }
         it { pref.should be_nil }
       end
 
@@ -61,7 +61,7 @@ describe JpPrefecture::Prefecture do
       context 'string の場合' do
         it '値が変更されないこと' do
           code = '1'
-          JpPrefecture::Prefecture.find(code)
+          VnPrefecture::Prefecture.find(code)
           code.should eq '1'
         end
       end
@@ -69,7 +69,7 @@ describe JpPrefecture::Prefecture do
       context 'code が string の場合' do
         it '値が変更されないこと' do
           code = '1'
-          JpPrefecture::Prefecture.find(code: code)
+          VnPrefecture::Prefecture.find(code: code)
           code.should eq '1'
         end
       end
@@ -77,7 +77,7 @@ describe JpPrefecture::Prefecture do
       context 'name の場合' do
         it '値が変更されないこと' do
           name = 'hokkaido'
-          JpPrefecture::Prefecture.find(name: name)
+          VnPrefecture::Prefecture.find(name: name)
           name.should eq 'hokkaido'
         end
       end
@@ -85,7 +85,7 @@ describe JpPrefecture::Prefecture do
       context 'zip の場合' do
         it '値が変更されないこと' do
           zip = '9999999'
-          JpPrefecture::Prefecture.find(zip: zip)
+          VnPrefecture::Prefecture.find(zip: zip)
           zip.should eq '9999999'
         end
       end
@@ -93,8 +93,8 @@ describe JpPrefecture::Prefecture do
   end
 
   describe '.all' do
-    let(:prefs) { JpPrefecture::Prefecture.all }
-    it { prefs.first.should be_an_instance_of(JpPrefecture::Prefecture) }
+    let(:prefs) { VnPrefecture::Prefecture.all }
+    it { prefs.first.should be_an_instance_of(VnPrefecture::Prefecture) }
     it '都道府県の数が 47 であること' do
       prefs.count.should eq 47
     end

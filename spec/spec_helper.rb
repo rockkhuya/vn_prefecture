@@ -1,5 +1,5 @@
 # coding: utf-8
-require 'jp_prefecture'
+require 'vn_prefecture'
 require "active_record"
 
 RSpec.configure do |config|

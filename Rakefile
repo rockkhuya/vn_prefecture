@@ -12,10 +12,10 @@ begin
 rescue LoadError => e
 end
 
-desc 'zip.yml を作成します'
+desc 'Load zip.yml'
 task :create_zips do
   require 'csv'
-  require 'jp_prefecture'
+  require 'vn_prefecture'
 
   file_name = 'ken_all_utf8.csv'
 
@@ -33,7 +33,7 @@ task :create_zips do
 
   # create sorted list of zips -> prefecture_code
   zips = zips
-    .collect { |zip, prefecture| [zip.to_i, JpPrefecture::Prefecture.find(name: prefecture).code] }
+    .collect { |zip, prefecture| [zip.to_i, VnPrefecture::Prefecture.find(name: prefecture).code] }
     .sort{ |x, y| x[0] <=> y[0] }
 
   # prepare calculation

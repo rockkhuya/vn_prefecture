@@ -1,144 +1,189 @@
-# JIS X 0402 で定義されている都道府県コードと都道府県名をベースに
-# コードがゼロから始まるもの(09 など)を 1 ケタにしたもの
----
 1:
-  :name: 北海道
-  :name_e: hokkaido
+  :name: "An Giang"
+  :name_e: "An Giang"
 2:
-  :name: 青森県
-  :name_e: aomori
+  :name: "Bà Rịa-Vũng Tàu"
+  :name_e: "Ba Ria-Vung Tau"
 3:
-  :name: 岩手県
-  :name_e: iwate
+  :name: "Bạc Liêu"
+  :name_e: "Bac Lieu"
 4:
-  :name: 宮城県
-  :name_e: miyagi
+  :name: "Bắc Kạn"
+  :name_e: "Bac Kan"
 5:
-  :name: 秋田県
-  :name_e: akita
+  :name: "Bắc Giang"
+  :name_e: "Bac Giang"
 6:
-  :name: 山形県
-  :name_e: yamagata
+  :name: "Bắc Ninh"
+  :name_e: "Bac Ninh"
 7:
-  :name: 福島県
-  :name_e: fukushima
+  :name: "Bến Tre"
+  :name_e: "Ben Tre"
 8:
-  :name: 茨城県
-  :name_e: ibaraki
+  :name: "Bình Dương"
+  :name_e: "Binh Duong"
 9:
-  :name: 栃木県
-  :name_e: tochigi
+  :name: "Bình Định"
+  :name_e: "Binh Dinh"
 10:
-  :name: 群馬県
-  :name_e: gunma
+  :name: "Bình Phước"
+  :name_e: "Binh Phuoc"
 11:
-  :name: 埼玉県
-  :name_e: saitama
+  :name: "Bình Thuận"
+  :name_e: "Binh Thuan"
 12:
-  :name: 千葉県
-  :name_e: chiba
+  :name: "Cà Mau"
+  :name_e: "Ca Mau"
 13:
-  :name: 東京都
-  :name_e: tokyo
+  :name: "Cao Bằng"
+  :name_e: "Cao Bang"
 14:
-  :name: 神奈川県
-  :name_e: kanagawa
+  :name: "Cần Thơ"
+  :name_e: "Can Tho"
 15:
-  :name: 新潟県
-  :name_e: niigata
+  :name: "Đà Nẵng"
+  :name_e: "Da Nang"
 16:
-  :name: 富山県
-  :name_e: toyama
+  :name: "Đắk Lắk"
+  :name_e: "Dac Lac"
 17:
-  :name: 石川県
-  :name_e: ishikawa
+  :name: "Đắk Nông"
+  :name_e: "Dac Nong"
 18:
-  :name: 福井県
-  :name_e: fukui
+  :name: "Điện Biên"
+  :name_e: "Dien Bien"
 19:
-  :name: 山梨県
-  :name_e: yamanashi
+  :name: "Đồng Nai"
+  :name_e: "Dong Nai"
 20:
-  :name: 長野県
-  :name_e: nagano
+  :name: "Đồng Tháp"
+  :name_e: "Dong Thap"
 21:
-  :name: 岐阜県
-  :name_e: gifu
+  :name: "Gia Lai"
+  :name_e: "Gia Lai"
 22:
-  :name: 静岡県
-  :name_e: shizuoka
+  :name: "Hà Giang"
+  :name_e: "Ha Giang"
 23:
-  :name: 愛知県
-  :name_e: aichi
+  :name: "Hà Nam"
+  :name_e: "Ha Nam"
 24:
-  :name: 三重県
-  :name_e: mie
+  :name: "Hà Nội"
+  :name_e: "Ha Noi"
 25:
-  :name: 滋賀県
-  :name_e: shiga
+  :name: "Hà Tĩnh"
+  :name_e: "Ha Tinh"
 26:
-  :name: 京都府
-  :name_e: kyoto
+  :name: "Hải Dương"
+  :name_e: "Hai Duong"
 27:
-  :name: 大阪府
-  :name_e: osaka
+  :name: "Hải Phòng"
+  :name_e: "Hai Phong"
 28:
-  :name: 兵庫県
-  :name_e: hyogo
+  :name: "Hậu Giang"
+  :name_e: "Hau Giang"
 29:
-  :name: 奈良県
-  :name_e: nara
+  :name: "Hòa Bình"
+  :name_e: "Hoa Binh"
 30:
-  :name: 和歌山県
-  :name_e: wakayama
+  :name: "Thành phố Hồ Chí Minh"
+  :name_e: "Thanh pho Ho Chi Minh"
 31:
-  :name: 鳥取県
-  :name_e: tottori
+  :name: "Hưng Yên"
+  :name_e: "Hung Yen"
 32:
-  :name: 島根県
-  :name_e: shimane
+  :name: "Khánh Hoà"
+  :name_e: "Khanh Hoa"
 33:
-  :name: 岡山県
-  :name_e: okayama
+  :name: "Kiên Giang"
+  :name_e: "Kien Giang"
 34:
-  :name: 広島県
-  :name_e: hiroshima
+  :name: "Kon Tum"
+  :name_e: "Kon Tum"
 35:
-  :name: 山口県
-  :name_e: yamaguchi
+  :name: "Lai Châu"
+  :name_e: "Lai Chau"
 36:
-  :name: 徳島県
-  :name_e: tokushima
+  :name: "Lạng Sơn"
+  :name_e: "Lang Son"
 37:
-  :name: 香川県
-  :name_e: kagawa
+  :name: "Lào Cai"
+  :name_e: "Lao Cai"
 38:
-  :name: 愛媛県
-  :name_e: ehime
+  :name: "Lâm Đồng"
+  :name_e: "Lam Dong"
 39:
-  :name: 高知県
-  :name_e: kochi
+  :name: "Long An"
+  :name_e: "Long An"
 40:
-  :name: 福岡県
-  :name_e: fukuoka
+  :name: "Nam Định"
+  :name_e: "Nam Dinh"
 41:
-  :name: 佐賀県
-  :name_e: saga
+  :name: "Nghệ An"
+  :name_e: "Nghe An"
 42:
-  :name: 長崎県
-  :name_e: nagasaki
+  :name: "Ninh Bình"
+  :name_e: "Ninh Binh"
 43:
-  :name: 熊本県
-  :name_e: kumamoto
+  :name: "Ninh Thuận"
+  :name_e: "Ninh Thuan"
 44:
-  :name: 大分県
-  :name_e: oita
+  :name: "Phú Thọ"
+  :name_e: "Phu Tho"
 45:
-  :name: 宮崎県
-  :name_e: miyazaki
+  :name: "Phú Yên"
+  :name_e: "Phu Yen"
 46:
-  :name: 鹿児島県
-  :name_e: kagoshima
+  :name: "Quảng Bình"
+  :name_e: "Quang Binh"
 47:
-  :name: 沖縄県
-  :name_e: okinawa
+  :name: "Quảng Nam"
+  :name_e: "Quang Nam"
+48:
+  :name: "Quảng Ngãi"
+  :name_e: "Quang Ngai"
+49:
+  :name: "Quảng Ninh"
+  :name_e: "Quang Ninh"
+50:
+  :name: "Quảng Trị"
+  :name_e: "Quang Tri"
+51:
+  :name: "Sóc Trăng"
+  :name_e: "Soc Trang"
+52:
+  :name: "Sơn La"
+  :name_e: "Son La"
+53:
+  :name: "Tây Ninh"
+  :name_e: "Tay Ninh"
+54:
+  :name: "Thái Bình"
+  :name_e: "Thai Binh"
+55:
+  :name: "Thái Nguyên"
+  :name_e: "Thai Nguyen"
+56:
+  :name: "Thanh Hoá"
+  :name_e: "Thanh Hoa"
+57:
+  :name: "Thừa Thiên-Huế"
+  :name_e: "Thua Thien-Hue"
+58:
+  :name: "Tiền Giang"
+  :name_e: "Tien Giang"
+59:
+  :name: "Trà Vinh"
+  :name_e: "Tra Vinh"
+60:
+  :name: "Tuyên Quang"
+  :name_e: "Tuyen Quang"
+61:
+  :name: "Vĩnh Long"
+  :name_e: "Vinh Long"
+62:
+  :name: "Vĩnh Phúc"
+  :name_e: "Vinh Phuc"
+63:
+  :name: "Yên Bái"
+  :name_e: "Yen Bai"

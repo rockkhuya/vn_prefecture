@@ -1,7 +1,7 @@
 # coding: utf-8
 require 'spec_helper'
 
-describe JpPrefecture::Config do
+describe VnPrefecture::Config do
   describe '#mapping_data' do
     context 'カスタマイズされたprefecture.ymlを使うとき' do
       before do

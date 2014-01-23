@@ -1,12 +1,12 @@
 # VnPrefecture
 
-https://rubygems.org/gems/jp_prefecture
+https://rubygems.org/gems/vn_prefecture
 
 ## vn_prefecture
 
 Thư viện viết cho Ruby on Rails để tham khảo và sử dụng một cách dễ dàng các tên tỉnh thành của Việt Nam. 
 
-Thư viện này được fetch từ thư viện cùng loại của Nhật là JpPrefecture.
+Thư viện này được fetch từ thư viện cùng loại của Nhật là VnPrefecture.
 
 Tên các tỉnh thành sẽ được định nghĩa bởi font Unicode.
 
@@ -27,7 +27,7 @@ Hà Nội : 1 -> 1
 以下の行を `Gemfile` に記述してから:
 
 ```
-gem 'jp_prefecture'
+gem 'vn_prefecture'
 ```
 
 `bundle` を実行してください。
@@ -35,7 +35,7 @@ gem 'jp_prefecture'
 または、手動でインストールしてください:
 
 ```
-$ gem install jp_prefecture
+$ gem install vn_prefecture
 ```
 
 ## 使い方
@@ -43,7 +43,7 @@ $ gem install jp_prefecture
 ### ライブラリの読み込み
 
 ```ruby
-require 'jp_prefecture'
+require 'vn_prefecture'
 ```
 
 ### 都道府県コードから都道府県を検索
@@ -51,8 +51,8 @@ require 'jp_prefecture'
 単純に都道府県コードを渡すと、都道府県コードから都道府県を検索します:
 
 ```ruby
-pref = JpPrefecture::Prefecture.find 13
-# => #<JpPrefecture::Prefecture:0x007fd0a3d43fe8 @code=13, @name="東京都", @name_e="Tokyo">
+pref = VnPrefecture::Prefecture.find 13
+# => #<VnPrefecture::Prefecture:0x007fd0a3d43fe8 @code=13, @name="東京都", @name_e="Tokyo">
 pref.code
 # => 13
 pref.name
@@ -64,27 +64,27 @@ pref.name_e
 以下のように渡すことも可能です:
 
 ```ruby
-JpPrefecture::Prefecture.find code: 13
+VnPrefecture::Prefecture.find code: 13
 ```
 
 ### 都道府県名から都道府県を検索
 
 ```ruby
-JpPrefecture::Prefecture.find name: "東京都"
-# => #<JpPrefecture::Prefecture:0x007ff672271800 @code=13, @name="東京都", @name_e="Tokyo">
+VnPrefecture::Prefecture.find name: "東京都"
+# => #<VnPrefecture::Prefecture:0x007ff672271800 @code=13, @name="東京都", @name_e="Tokyo">
 
-JpPrefecture::Prefecture.find name: "Tokyo"
-# => #<JpPrefecture::Prefecture:0x007fb3c2828b10 @code=13, @name="東京都", @name_e="Tokyo">
+VnPrefecture::Prefecture.find name: "Tokyo"
+# => #<VnPrefecture::Prefecture:0x007fb3c2828b10 @code=13, @name="東京都", @name_e="Tokyo">
 
-JpPrefecture::Prefecture.find name: "tokyo"
-# => #<JpPrefecture::Prefecture:0x007f965c0c5a40 @code=13, @name="東京都", @name_e="Tokyo">
+VnPrefecture::Prefecture.find name: "tokyo"
+# => #<VnPrefecture::Prefecture:0x007f965c0c5a40 @code=13, @name="東京都", @name_e="Tokyo">
 ```
 
 ### 都道府県の一覧を取得
 
 ```ruby
-JpPrefecture::Prefecture.all
-# => [#<JpPrefecture::Prefecture:0x007fd0a3d78d38 @code=1, @name="北海道", @name_e="Hokkaido">, ...]
+VnPrefecture::Prefecture.all
+# => [#<VnPrefecture::Prefecture:0x007fd0a3d78d38 @code=1, @name="北海道", @name_e="Hokkaido">, ...]
 ```
 
 ### Rails(ActiveRecord) で使用する
@@ -97,8 +97,8 @@ app/models/place.rb:
 class Place < ActiveRecord::Base
   # prefecture_code:integer
 
-  include JpPrefecture
-  jp_prefecture :prefecture_code
+  include VnPrefecture
+  vn_prefecture :prefecture_code
 end
 ```
 
@@ -115,7 +115,7 @@ place.prefecture.name
 
 ```ruby
 # model
-jp_prefecture :prefecture_code, method_name: :pref
+vn_prefecture :prefecture_code, method_name: :pref
 
 place = Place.new
 place.prefecture_code = 13
@@ -128,10 +128,10 @@ place.pref.name
 `collection_select` を使用して、都道府県のセレクトボックスを生成することができます。:
 
 ```ruby
-f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name
+f.collection_select :prefecture_code, VnPrefecture::Prefecture.all, :code, :name
 
 # 英語表記で出力
-f.collection_select :prefecture_code, JpPrefecture::Prefecture.all, :code, :name_e
+f.collection_select :prefecture_code, VnPrefecture::Prefecture.all, :code, :name_e
 ```
 
 ### マイグレーション
@@ -156,20 +156,20 @@ end
 ```ruby
 custom_mapping_path = "..." # /path/to/mapping_data
 
-JpPrefecture.setup do |config|
+VnPrefecture.setup do |config|
   config.mapping_data = YAML.load_file custom_mapping_path
 end
 ```
 
-マッピングデータのフォーマットについては [prefecture.yml](https://github.com/chocoby/jp_prefecture/blob/master/data/prefecture.yml) を参考にしてください。
+マッピングデータのフォーマットについては [prefecture.yml](https://github.com/chocoby/vn_prefecture/blob/master/data/prefecture.yml) を参考にしてください。
 
 ## ドキュメント
 
-[http://rdoc.info/github/chocoby/jp_prefecture/master/frames/index](http://rdoc.info/github/chocoby/jp_prefecture/master/frames/index)
+[http://rdoc.info/github/chocoby/vn_prefecture/master/frames/index](http://rdoc.info/github/chocoby/vn_prefecture/master/frames/index)
 
 ## TODO
 
-GitHub の [Issues](https://github.com/chocoby/jp_prefecture/issues) を参照してください。
+GitHub の [Issues](https://github.com/chocoby/vn_prefecture/issues) を参照してください。
 
 ## 対象バージョン
 
@@ -186,7 +186,7 @@ GitHub の [Issues](https://github.com/chocoby/jp_prefecture/issues) を参照�
 
 ## GitHub
 
-https://github.com/chocoby/jp_prefecture
+https://github.com/chocoby/vn_prefecture
 
 ## ライセンス
 

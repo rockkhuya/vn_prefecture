@@ -1,15 +1,15 @@
 # coding: utf-8
 require 'spec_helper'
 
-describe JpPrefecture::Base do
-  describe '#jp_prefecture' do
+describe VnPrefecture::Base do
+  describe '#vn_prefecture' do
     describe 'カラム名の指定について' do
       context 'prefecture_code を指定した場合' do
         let(:model_class) do
           klass = Class.new(ActiveRecord::Base) do
             self.table_name = :places
-            include JpPrefecture
-            jp_prefecture :prefecture_code
+            include VnPrefecture
+            vn_prefecture :prefecture_code
           end
 
           klass.new(:prefecture_code => 1)
@@ -24,8 +24,8 @@ describe JpPrefecture::Base do
         let(:model_class) do
           klass = Class.new(ActiveRecord::Base) do
             self.table_name = :places
-            include JpPrefecture
-            jp_prefecture :prefecture_id
+            include VnPrefecture
+            vn_prefecture :prefecture_id
           end
 
           klass.new(:prefecture_id => 1)
@@ -42,8 +42,8 @@ describe JpPrefecture::Base do
         let(:model_class) do
           klass = Class.new(ActiveRecord::Base) do
             self.table_name = :places
-            include JpPrefecture
-            jp_prefecture :prefecture_code, :method_name => :prefecture_method
+            include VnPrefecture
+            vn_prefecture :prefecture_code, :method_name => :prefecture_method
           end
 
           klass.new(:prefecture_code => 1)
@@ -59,15 +59,15 @@ describe JpPrefecture::Base do
       let(:klass) do
         Class.new(ActiveRecord::Base) do
           self.table_name = :places
-          include JpPrefecture
-          jp_prefecture :prefecture_code
+          include VnPrefecture
+          vn_prefecture :prefecture_code
         end
       end
 
       context '都道府県が見つかった場合' do
         let(:model_class) { klass.new(:prefecture_code => 1) }
         it { model_class.should respond_to(:prefecture) }
-        it { model_class.prefecture.should be_an_instance_of(JpPrefecture::Prefecture) }
+        it { model_class.prefecture.should be_an_instance_of(VnPrefecture::Prefecture) }
         it { model_class.prefecture.name.should eq '北海道' }
       end
 
